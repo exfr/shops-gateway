@@ -1,0 +1,18 @@
+server:
+  port: ${APP_PORT:8081}
+spring:
+  application:
+    name: security-service
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    config:
+      discovery:
+        enabled: true
+      activate:
+        on-profile: dev
+eureka:
+  instance: # для localhost
+    prefer-ip-address: true
+    hostname: localhost
